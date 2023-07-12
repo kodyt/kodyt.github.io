@@ -391,11 +391,11 @@ img {
 }
 
 .about__title{
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
 }
 
 .about__subtitle{
-  font-size: var(--tiny-font-size);
+  font-size: var(--small-font-size);
 }
 
 .about__description{
