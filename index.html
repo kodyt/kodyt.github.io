@@ -27,11 +27,16 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -51,10 +56,15 @@
             <a class="btn ghost" href="#contact">Contact</a>
           </div>
         </div>
-        <div class="hero-card" aria-hidden="true">
+        <div class="hero-card">
           <div class="card-inner">
-            <p>Designing systems with clarity, performance, and impact.</p>
-            <div class="signal"></div>
+            <div class="hero-card-header">
+              <p class="hero-card-subtitle">Designing systems with clarity, performance, and impact.</p>
+            </div>
+            <a class="hero-game-link" href="#game" data-reveal-game aria-label="Play a game">
+              <span>Play a game with me</span>
+              <span class="arrow">↓</span>
+            </a>
           </div>
         </div>
       </div>
@@ -62,6 +72,7 @@
         <span></span>
       </div>
     </section>
+
 
     <!-- About -->
     <section id="about" class="section reveal">
@@ -220,12 +231,46 @@
           </a>
           <div class="contact-item">
             <span class="label">Phone</span>
-            <span class="value">248-385-6126</span>
+            <span class="value">(248)385-6126</span>
           </div>
           <a class="contact-item icon" href="https://www.linkedin.com/in/kody-takada/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C3.33 3.5 2 4.85 2 6.5S3.33 9.5 4.98 9.5c1.64 0 2.97-1.35 2.97-3S6.62 3.5 4.98 3.5zM2.4 21.5h5.15V10.1H2.4v11.4zM9.7 10.1v11.4h5.15v-6.1c0-1.62.31-3.2 2.32-3.2 1.99 0 2.02 1.86 2.02 3.3v6h5.15v-7c0-3.44-.74-6.08-4.76-6.08-1.93 0-3.22 1.06-3.75 2.06h-.03v-1.78H9.7z"/></svg>
             <span class="value">LinkedIn</span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game -->
+    <section id="game" class="section reveal game-hidden">
+      <div class="container">
+        <div class="section-header">
+          <h2>Play</h2>
+          <p class="section-lead">1v1 me.</p>
+        </div>
+        <div class="game-panel">
+          <div class="ttt" aria-label="Tic Tac Toe game">
+            <div class="ttt-score">
+              <span>You: <strong id="ttt-player-score">0</strong></span>
+              <span>Me: <strong id="ttt-bot-score">0</strong></span>
+              <span>Draws: <strong id="ttt-draw-score">0</strong></span>
+            </div>
+            <div class="ttt-grid" role="grid" aria-live="polite">
+              <button class="ttt-cell" role="gridcell" data-index="0" aria-label="Cell 1"></button>
+              <button class="ttt-cell" role="gridcell" data-index="1" aria-label="Cell 2"></button>
+              <button class="ttt-cell" role="gridcell" data-index="2" aria-label="Cell 3"></button>
+              <button class="ttt-cell" role="gridcell" data-index="3" aria-label="Cell 4"></button>
+              <button class="ttt-cell" role="gridcell" data-index="4" aria-label="Cell 5"></button>
+              <button class="ttt-cell" role="gridcell" data-index="5" aria-label="Cell 6"></button>
+              <button class="ttt-cell" role="gridcell" data-index="6" aria-label="Cell 7"></button>
+              <button class="ttt-cell" role="gridcell" data-index="7" aria-label="Cell 8"></button>
+              <button class="ttt-cell" role="gridcell" data-index="8" aria-label="Cell 9"></button>
+            </div>
+            <div class="ttt-status">
+              <span id="ttt-message">Your move.</span>
+              <button class="ttt-reset" type="button">Reset</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
